@@ -1,9 +1,15 @@
 import React from "react"
+import { Switch, Route } from "react-router-dom";
+import { Inicio } from "./Inicio";
+import { ProductosListas } from "./Productos/index";
 
-export const ProductosListas = () => {
+export const Paginas = () => {
     return (
-        <div>
-            
-        </div>
+        <section>
+        <Switch>
+            <Route path="/" exact component={Inicio} />
+            <Route path="/productos" exact component={ProductosListas} />
+        </Switch>
+        </section>
     )
 }
